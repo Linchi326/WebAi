@@ -1,17 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-    <title>PyScript Example</title>
+    <title>自我介紹</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .image-container {
+            margin-right: 30px;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        .content {
+            max-width: 500px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .info-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello from PyScript!</h1>
+    <h1>自我介紹</h1>
+    
+    <!-- 這裡放置你的個人圖片 -->
+    <div class="container">
+        <div class="image-container">
+            <img src="myself.jpg" alt="我的圖片"> <!-- 替換為你的圖片檔案 -->
+        </div>
+        <div class="content">
+            <p>嗨，大家好！我是 <strong>[你的名字]</strong>。歡迎來到我的自我介紹頁面！</p>
+            <p>這裡會有一些關於我的個人資訊，讓你們更加了解我：</p>
+
+            <form>
+                <!-- 這裡填寫你的名字 -->
+                <label for="name">名字：</label>
+                <input type="text" id="name" class="info-input" placeholder="輸入你的名字" value="[你的名字]">
+
+                <!-- 這裡填寫你的興趣 -->
+                <label for="interest">興趣：</label>
+                <input type="text" id="interest" class="info-input" placeholder="輸入你的興趣" value="[你的興趣]">
+
+                <!-- 這裡填寫你的職業 -->
+                <label for="job">職業：</label>
+                <input type="text" id="job" class="info-input" placeholder="輸入你的職業" value="[你的職業]">
+
+                <!-- 這裡填寫你喜歡的東西 -->
+                <label for="favorites">喜歡的東西：</label>
+                <input type="text" id="favorites" class="info-input" placeholder="輸入你喜歡的東西" value="[你喜歡的東西]">
+
+                <!-- 這裡填寫你喜歡聽的歌 -->
+                <label for="favorite_song">喜歡聽的歌：</label>
+                <input type="text" id="favorite_song" class="info-input" placeholder="輸入你喜歡的歌曲" value="[你喜歡聽的歌]">
+            </form>
+
+            <p>希望這些資訊能讓你更了解我！</p>
+        </div>
+    </div>
+
     <py-script>
-        print("Hello, World!")
+        # 這裡可以加入一些額外的 Python 程式碼，來與網頁互動
+        print("歡迎來到我的自我介紹頁面！")
     </py-script>
 </body>
 </html>
-
